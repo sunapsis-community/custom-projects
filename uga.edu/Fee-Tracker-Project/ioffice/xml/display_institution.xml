@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<display xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/display.xsd">
+	<generalCodesDisplay>
+		<set label="Institutional Code and Data Configurations | Custom Employees">
+			<dataObject reference="codeUGAFeePayor" view="multi" width="700" height="600"/>
+			<dataObject reference="codeUGAFeeType" view="multi" width="700" height="600"/>
+			<dataObject reference="codeUGAScholarFundingLevel" view="multi" width="700" height="600"/>
+			<dataObject reference="codeUGAFeeBillingStatus" view="multi" width="700" height="600"/>
+			<dataObject reference="mapUGAFeeFields" view="multi" width="700" height="600"/>
+		</set>
+	</generalCodesDisplay>
+	<individualDisplay>
+		<set label="UGA Finance">
+			<dataObject reference="jbCustomFields9" view="multi" width="900" height="525"/>
+			<dataObject reference="jbCustomFields3" view="multi" width="900" height="525"/>
+			<dataObject reference="jbUGAFields" view="single" width="700" height="525"/>
+		</set>
+	</individualDisplay>
+</display>

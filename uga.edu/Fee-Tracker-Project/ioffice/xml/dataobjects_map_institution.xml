@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="mapUGAFeeFields" label="Map UGA Fee Fields" module="sunapsis">
+		<menu type="tree">%feeName% → [newline]%feeAmount%</menu>
+		<description>
+			<![CDATA[
+			The Map UGA fee fields creates a mapping of eforms to billable fees.
+		]]>
+		</description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="mapUGAFeeFields" key="recnum"/>
+		<datums>
+			<datum key="recnum" label=" " type="integer"/>
+			<datum key="feeName" label="Name of fee" type="string" length="200" data="required" sort="asc"/>
+			<datum key="invoiceNumberServiceID" label="Service ID for Invoice Number" type="string" length="200" sort="asc"/>
+			<datum key="invoiceStatusServiceID" label="Service ID for Invoice Status update" type="string" length="200" sort="asc"/>
+			<datum key="feeAmount" label="Fee Amount" type="string" length="200" data="required" sort="asc"/>
+			<datum key="toBePaidBy" label="To be paid by" type="string" length="200" data="required" sort="asc"/>
+			<datum key="feeFieldID" label="Eform field id of the fee" type="string" length="200" sort="asc"/>
+			<datum key="speedtype" label="Speedtype" type="string" length="200" sort="asc"/>
+			
+		</datums>
+		<constraints/>
+	</dataObject>
+
+</data>

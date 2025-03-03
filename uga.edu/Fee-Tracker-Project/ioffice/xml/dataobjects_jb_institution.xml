@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="jbUGAFields" label="UGA Profile - Scholar Funding Level" module="iom">
+		<menu>%fundingLevel%</menu>
+		<description>
+			<![CDATA[This has been added by UGA for custom record fields.]]>
+		</description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="jbInternational" key="idnumber" />
+		<datums>
+			<datum key="recnum" label=" " type="integer" />
+			<datum key="idnumber" label=" " type="integer" />
+			<datum key="fundingLevel" label="Funding Level" type="string" length="200" >
+				<reference dataObject="codeUGAScholarFundingLevel" valueKey="code" displayKey="description"/>
+			</datum>
+			<datum key="datestamp" label="Last Updated" type="datestamp" sort="desc" />
+		</datums>
+		<constraints />
+	</dataObject>
+	<dataObject name="jbCustomFields9" label=" " module="sunapsis">
+		<menu>%customField2%[newline]%customField12%[newline]%customField5%</menu>
+		<description>
+			<![CDATA[
+		]]>
+		</description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="jbInternational" key="idnumber"/>
+		<datums>
+			<datum key="customField1" label=" " type="string" length="4000"/>
+			<datum key="customField2" label=" " type="string" length="4000"/>
+			<datum key="customField3" label=" " type="string" length="4000"/>
+			<datum key="customField4" label=" " type="string" length="4000"/>
+			<datum key="customField5" label=" " type="string" length="4000"/>
+			<datum key="customField6" label=" " type="string" length="4000"/>
+			<datum key="customField7" label=" " type="string" length="4000"/>
+			<datum key="customField8" label=" " type="string" length="4000"/>
+			<datum key="customField9" label=" " type="string" length="4000"/>
+			<datum key="customField10" label=" " type="string" length="4000"/>
+			<datum key="customField11" label=" " type="string" length="4000"/>
+			<datum key="customField12" label=" " type="string" length="4000"/>
+			<datum key="customField13" label=" " type="string" length="4000"/>
+			<datum key="customField14" label=" " type="string" length="4000"/>
+			<datum key="customField15" label=" " type="string" length="4000"/>
+			<datum key="customField16" label=" " type="string" length="4000"/>
+			<datum key="customField17" label=" " type="string" length="4000"/>
+			<datum key="customField18" label=" " type="string" length="4000"/>
+			<datum key="customField19" label=" " type="string" length="4000"/>
+			<datum key="customField20" label=" " type="string" length="4000"/>
+			<datum key="customField21" label=" " type="string" length="4000"/>
+			<datum key="customField22" label=" " type="string" length="4000"/>
+			<datum key="customField23" label=" " type="string" length="4000"/>
+			<datum key="customField24" label=" " type="string" length="4000"/>
+			<datum key="customField25" label=" " type="string" length="4000"/>
+			<datum key="customField26" label=" " type="string" length="4000"/>
+			<datum key="customField27" label=" " type="string" length="4000"/>
+			<datum key="customField28" label=" " type="string" length="4000"/>
+			<datum key="customField29" label=" " type="string" length="4000"/>
+			<datum key="customField30" label=" " type="string" length="4000"/>
+			<datum key="customField31" label=" " type="string" length="4000"/>
+			<datum key="customField32" label=" " type="string" length="4000"/>
+			<datum key="customField33" label=" " type="string" length="4000"/>
+			<datum key="customField34" label=" " type="string" length="4000"/>
+			<datum key="customField35" label=" " type="string" length="4000"/>
+			<datum key="customField36" label=" " type="string" length="4000"/>
+			<datum key="customField37" label=" " type="string" length="4000"/>
+			<datum key="customField38" label=" " type="string" length="4000"/>
+			<datum key="customField39" label=" " type="string" length="4000"/>
+			<datum key="customField40" label=" " type="string" length="4000"/>
+			<datum key="customField41" label=" " type="string" length="4000"/>
+			<datum key="customField42" label=" " type="string" length="4000"/>
+			<datum key="customField43" label=" " type="string" length="4000"/>
+			<datum key="customField44" label=" " type="string" length="4000"/>
+			<datum key="customField45" label=" " type="string" length="4000"/>
+			<datum key="customField46" label=" " type="string" length="4000"/>
+			<datum key="customField47" label=" " type="string" length="4000"/>
+			<datum key="customField48" label=" " type="string" length="4000"/>
+			<datum key="customField49" label=" " type="string" length="4000"/>
+			<datum key="customField50" label=" " type="string" length="4000"/>
+			<datum key="datestamp" label="Last Updated" type="datestamp"/>
+			<datum key="recnum" label=" " type="integer"/>
+			<datum key="idnumber" label=" " type="integer"/>
+		</datums>
+		<constraints/>
+	</dataObject>
+	
+	
+</data>

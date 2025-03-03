@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+	<dataObject name="mapUGAFeeFields" label="Map UGA Fee Fields" clientRefable="true">
+		<menu type="tree">%code%</menu>
+		<description><![CDATA[The Map UGA fee codes for reference on drop down list.]]>
+		</description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="mapUGAFeeFields" key="recnum"/>
+		<datums>
+			<datum key="code" label="Code" type="string" length="255" data="required"/>
+			<datum key="recnum" label=" " type="integer"/>
+		</datums>
+		<constraints/>
+	</dataObject>
+	<dataObject name="codeUGAFeeBillingStatus" label="UGA Fee Billing Status" clientRefable="true">
+		<menu>%description%</menu>
+		<description><![CDATA[<p>College Nomination Category</p>]]></description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="codeUGAFeeBillingStatus" key="recnum"/>
+		<datums>
+			<datum key="code" label="Code" type="string" length="20" data="required"/>
+			<datum key="description" label="Description" type="string" length="100" data="required" sort="asc"/>
+			<datum key="recnum" label=" " type="integer"/>
+		</datums>
+		<constraints/>
+	</dataObject>
+	<dataObject name="codeUGAScholarFundingLevel" label="UGA Scholar Funding Level" clientRefable="true">
+		<menu>%description% (%code%)</menu>
+		<description><![CDATA[<p>UGA Scholar Funding Level</p>]]></description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="codeUGAScholarFundingLevel" key="recnum"/>
+		<datums>
+			<datum key="code" label="Code" type="string" length="10" data="required"/>
+			<datum key="description" label="Description" type="string" length="100" data="required" sort="asc"/>
+			<datum key="recnum" label=" " type="integer"/>
+		</datums>
+		<constraints/>
+	</dataObject>
+	<dataObject name="codeUGAFeePayor" label="UGA Fee to be Paid By" clientRefable="true">
+		<menu>%code%</menu>
+		<description><![CDATA[<p>UGA Scholar Funding Level</p>]]></description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="codeUGAFeePayor" key="recnum"/>
+		<datums>
+			<datum key="code" label="Code" type="string" length="100" data="required" sort="asc"/>
+			<datum key="description" label="Description" type="string" length="100" />
+			<datum key="recnum" label=" " type="integer"/>
+		</datums>
+		<constraints/>
+	</dataObject>
+</data>
