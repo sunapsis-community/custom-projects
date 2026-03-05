@@ -1,6 +1,4 @@
-This is code for IU's Slate Integration. I believe that it should work for anyone on 4.2.
-
-This probably seems over-engineered, but I have about a dozen integrations using the components in the integrations.dataTransfer package.
+This is code for IU's Slate Integration. I believe that it should work for anyone on 4.2. This probably seems over-engineered, but I have about a dozen integrations using the components in the integrations.dataTransfer package.
 
 The entry point for this code is transfer-endpoints/SlateReceiver.cfm.  It receives data from sunapsis' Data Transfer API.
 
