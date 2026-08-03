@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/sunapsis/dataobjects.xsd">
+				
+	<dataObject name="jbEmployeeH1BInfo" label="Employment Summary" module="iom">
+		<menu>%lcaNumber%[newline]%approvalStartDate% - %approvalEndDate%</menu>
+		<description>
+			<![CDATA[
+			(UGA altered) The Employment Summary screen is the main structure that defines an employment record for
+			an H-1B, O-1, E-3, or TN. (much as the I-20 Program Information is the main structure for
+			F-1 students and the DS-2019 Program Informatioin is the main structure for J-1 Scholars
+			and Students). This screen allows the international office to track an employment record
+			from petition to completion. This screen will generally need to be manually tracked by the
+			international office.<br />
+			<br />
+			If the approval start and end dates are amended for any reason (such as a change of status
+			or a shortened petition) you can update the Approval Start and End Dates on this screen
+			and, if desired, move the original approval start and end dates to the Original Approval
+			Start Date and Original Approval End Date. This will allow for a history for this LCA.<br />
+			<br />
+			If the person is an H-1B this screen is used to link the LCA Number with a position number
+			(or numbers if multiple). All alert analysis (such as the H-1B Compensation Rate Below Minimum)
+			will be based on the link on this screen between the LCA Number and position number(s). If there
+			are multiple position numbers tied to a single LCA Number, then enter them as a comma separated
+			list.
+		]]>
+		</description>
+		<primaryKey>recnum</primaryKey>
+		<foreignKey dataObject="jbInternational" key="idnumber" />
+		<datums>
+			<datum key="billingStartDate" label="H1B Max Date" type="date" />
+			<datum key="lcaNumber" label="LCA Number" type="string" length="20" />
+			<datum key="positionNumber" label="Position Number(s) for Employment Period" type="string" length="425" />
+			<datum key="excludePositionNumber" label="Explicitly Ignored Position Number(s) for Employment Period" type="string" length="425" />
+			<datum key="socCode" label="SOC Code" type="string" length="7">
+				<reference dataObject="viewCodeSOC" valueKey="code" displayKey="description" />
+			</datum>
+			<datum key="appointmentTitle" label="Appointment Title" type="string" length="100" />
+			<datum key="inspectionFileCreated" label="Public Inspection File Created" type="boolean" />
+			<datum key="petitionMailedDate" label="I-129 Petition Mailed Date" type="date" />
+			<datum key="ppReceiptNoticeDate" label="Premium Processing Receipt Notice Date" type="date" />
+			<datum key="receiptNoticeDate" label="I-129 Receipt Notice Date" type="date" />
+			<datum key="linNumber" label="Case Number" type="string" length="20" />
+			<datum key="petitionApprovalDate" label="I-129 Petition Approval Date" type="date" />
+			<datum key="rfeDate" label="RFE Date" type="date" />
+			<datum key="rfeResponseDate" label="RFE Response Date" type="date" />
+			<datum key="approvalStartDate" label="Approval Start Date" type="date" />
+			<datum key="approvalEndDate" label="Approval End Date" type="date" />
+			<datum key="requiredStartDate" label="Required Start Date" type="date" />
+			<datum key="immigrationStatus" label="Immigration Status" type="string" length="10">
+				<reference dataObject="viewCodeEmploymentVisa" valueKey="code" displayKey="description" />
+			</datum>
+			<datum key="status" label="Status" type="string" length="5">
+				<reference dataObject="codeEmploymentStatus" valueKey="code" displayKey="description" />
+			</datum>
+			<datum key="effectiveDate" label="Effective Status Date" type="date" />
+			<datum key="type" label="Type" type="integer">
+				<reference dataObject="codeFormI129Basis" valueKey="code" displayKey="description" />
+			</datum>
+			<datum key="verification" label="Last Position Verification Date" type="date" />
+			<datum key="alienANumber" label="Alien Number" type="string" length="11" />
+			<datum key="givenToLawyer" label="Date Given to Lawyer" type="date" />
+			<datum key="lawyerName" label="Name of Lawyer" type="string" length="250" />
+			<datum key="originalInfo" label="Original Approval Dates" type="header" />
+			<datum key="originalApprovalStartDate" label="Original Approval Start Date" type="date" />
+			<datum key="originalApprovalEndDate" label="Original Approval End Date" type="date" />
+			<datum key="datestamp" label="Last Updated" type="datestamp" sort="desc" />
+			<datum key="recnum" label=" " type="integer" />
+			<datum key="idnumber" label=" " type="integer" />
+		</datums>
+		<constraints>
+			<constraint type="UpdateProfileStatusConstraint" key="recnum" />
+			<constraint type="CompareDatesKeyLessThanCompareConstraint" key="approvalStartDate">
+				<compare>approvalEndDate</compare>
+			</constraint>
+		</constraints>
+	</dataObject>
+	
+</data>
